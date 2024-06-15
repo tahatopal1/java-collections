@@ -1,0 +1,55 @@
+What is Concurrency?
+
+    Concurrency is the ability to run several programs or several parts of a program in parallel. This capability
+enables a program to achieve high performance and throughput because several parts of the program are running
+simultaneously, reducing the overall execution time.
+
+The Problem with Multithreading
+
+    Java provides multithreading to run programs in multiple threads. However, problems arise when multiple threads try
+to access the same resource, such as the same data or collection object.
+
+Data Inconsistency
+
+    When multiple threads operate on the same data without proper synchronization, data inconsistency can occur. For
+instance, if one thread is in the middle of processing data and another modifies the same data, the results can be
+unpredictable and incorrect.
+
+Synchronized Blocks and Methods
+
+    To prevent data inconsistency, Java programmers use synchronized blocks or methods to ensure that only one thread
+can access a critical section of code at a time. However, synchronization should be used wisely, as it can lead to
+sequential processing rather than parallel processing. This means that only one thread can operate on the synchronized
+block at any given time, which can negate the benefits of multithreading.
+
+Legacy Synchronized Collections
+
+    Legacy classes like 'Vector' and 'Hashtable' are synchronized by default. While this makes them safer in a
+multithreading environment, it also makes the slower compared to non-synchronized collections like 'ArrayList' and
+'HashMap'
+
+Synchronized Collections Utility
+
+    Java provides utility methods in the 'Collections' class to obtain synchronized version of existing collections.
+For example:
+
+        ->  Collections.synchronizedList(List<T> list)
+        ->  Collections.synchronizedMap(Map<K, V> map)
+        ->  Collections.synchronizedSet(Set<T> set)
+
+The Need for Concurrent Collections
+
+    Despite having synchronized versions of collections, there was a need for more efficient synchronization mechanisms.
+The traditional approach of locking he entire collection object is not optimal for performance, especially when multiple
+threads were trying to read data concurrently. To address this, Java introduced concurrent collections, which offer
+improved performance and scalability.
+
+Benefits of Concurrent Collections
+
+    ->  Optimized Synchronization: Concurrent collections proved finer-grained synchronization, allowing multiple
+threads to read data concurrently while still maintaining the thread safety.
+
+    ->  Improved Performance: By reducing contention and locking, concurrent collections offer better performance
+compared to their synchronized counterparts.
+
+

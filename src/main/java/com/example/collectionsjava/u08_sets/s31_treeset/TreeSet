@@ -1,0 +1,18 @@
+Intro
+
+TreeSet class implements 'NavigableSet' and 'SortedSet' interfaces.
+
+Key Properties
+
+    ->  Duplicates: Not allowed.
+    ->  Insertion Order: Elements are sorted based on their natural ordering or provided comparator.
+    ->  Heterogeneous Elements: Not allowed.
+    ->  Null Values: Allowed only if 'TreeSet' is empty and null is the first and only element. Otherwise
+            it results in a NullPointerException
+
+Characteristics
+
+    ->  Implementation based on a balanced tree (Red-Black Tree)
+    ->  Ensures elements are inserted in a sorted order.
+    ->  Elements must be homogeneous and comparable.
+d

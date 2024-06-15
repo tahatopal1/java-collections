@@ -1,0 +1,11 @@
+Intro
+
+    'HashMap' is a data structure for storing key-value pairs.
+
+Internal Working
+
+    ->  A 'HashMap' uses an array of buckets (nodes) to store key-value pairs.
+    ->  The hash code of a key determines the bucket where the key-pair is stored.
+    ->  If two keys have the same hash code, they are stored in the same bucket using a linked list.
+    ->  The initial array size is 16, and it grows dynamically as elements are added (resize happens when 75% of the
+array is filled.)

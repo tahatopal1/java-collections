@@ -1,0 +1,18 @@
+Definition
+
+    ->  A raw type is a generic class or interface used without type arguments.
+
+Raw Types and Compatibility
+
+    ->  Raw types retained for backward compatibility with older Java versions.
+    ->  Using raw types is not type-safe and may cause runtime errors and require type casting.
+
+Best Practices
+
+    ->  Avoiding using raw types when dealing with single type collections.
+    ->  Use parameterized types if mixed types are needed to avoid raw type warnings.
+
+Conclusion
+
+    ->  Understanding raw types is important for maintaining and updating legacy code.
+    ->  Using generics ensures type safety and reduces runtime errors.

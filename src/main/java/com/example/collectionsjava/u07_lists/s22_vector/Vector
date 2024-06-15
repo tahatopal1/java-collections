@@ -1,0 +1,29 @@
+Intro
+
+    The last implementation class under the 'List' interface, is 'Vector'. Vector is based on a resizable array,
+preserving insertion order and allowing duplicate and heterogeneous elements. Vector implements the 'Serializable',
+'Cloneable' and 'RandomAccess' interfaces. The primary difference between Vector and ArrayList is that all methods
+in Vector are synchronized, making the Vector thread-safe, while ArrayList methods are not synchronized, resulting in
+higher performance due to lack of waiting.
+
+Key points:
+
+1) Synchronization:
+
+    Vector: Methods are synchronized, ensuring thread safety but with lower performance.
+    ArrayList: Methods are not synchronized, allowing higher performance.
+
+2) Creation and Resizing:
+
+    Can be initialized with a default size of 10. When it's capacity exceeded, a new Vector of double the
+    size is created.
+
+    Custom capacity and incremental capacity can be set during creation to manage resizing more efficiently.
+
+3) Conversion
+
+    Vector can be created from any collection (e.g ArrayList, HashSet)
+
+4) Legacy Class
+
+    Vector is legacy class available since Java 1.0, whereas ArrayList was introduced in Java 1.2

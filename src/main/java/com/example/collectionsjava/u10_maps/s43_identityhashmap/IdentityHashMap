@@ -1,0 +1,27 @@
+Intro
+
+    It is similar to 'HashMap' in terms of storing key-value pairs and having similar methods and constructors, but
+it has a crucial difference in how it handles key comparison.
+
+Key Difference
+
+    1) Key Comparison
+
+        HashMap:
+
+            ->  Uses the 'equals' method to compare keys. It checks if the values of the keys are equal.
+
+        IdentityHashMap:
+
+            ->  Uses the '==' operator to compare keys. It checks if the references (memory addresses) of the keys are
+        equal.
+
+    2) Duplicate Keys
+
+        HashMap:
+
+            ->  Does not allow duplicate keys based on the 'equals' method.
+
+        IdentityHashMap:
+
+            ->  Does not allow duplicate keys based on the '==' operator.

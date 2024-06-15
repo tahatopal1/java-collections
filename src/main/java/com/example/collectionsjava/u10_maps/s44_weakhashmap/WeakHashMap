@@ -1,0 +1,29 @@
+Intro
+
+    WeakHashMap is similar to HashMap but with a few key differences, especially concerning garbage collection.
+
+Key Differences
+
+    1) Garbage Collection
+
+        HashMap:
+
+            ->  Objects used as keys in a 'HashMap' are strongly referenced. As long as a key is present in the HashMap
+        it is not eligible for garbage collection.
+
+        WeakHashMap:
+
+            ->  Objects used as keys in a 'WeakHashMap' are weakly referenced. If a key has no strong reference
+        elsewhere in the application, it is eligible for garbage collection and once collected, the corresponding entry
+        is removed from the WeakHashMap
+
+    2) Interfaces Implemented
+
+        HashMap:
+
+            ->  Implements 'Serializable' and 'Cloneable' interfaces.
+
+        WeakHashMap:
+
+            ->  Does not implement 'Serializable' and 'Cloneable' interfaces. Therefore, WeakHashMap cannot be
+        serialized or cloned.

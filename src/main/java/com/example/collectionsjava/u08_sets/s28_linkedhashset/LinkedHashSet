@@ -1,0 +1,18 @@
+Intro
+
+    'LinkedHashSet' is a subclass of 'HashSet'. It preserves the insertion order of elements while maintaining
+the properties of a HashSet. It's a combination of a hash table and linked list underneath.
+
+    LinkedHashSet preserves the insertion order by maintaining a linked list whereas it leverages a hash table
+to ensure an efficient searching. In this regard, it uses linked list when traversing and uses hash table when
+conducting a search. LinkedHashSet is more bulky than the HashSet as it maintains two different data structures.
+
+The LinkedHashSet inherits all methods from the Collection interface.
+
+Characteristics of 'HashSet'
+
+    -> Duplicates: Not allowed.
+    -> Insertion Order: Preserved.
+    -> Heterogeneous Elements: Allowed.
+    -> Null Values: Allowed.
+    -> Interfaces Implemented: Serializable, Cloneable

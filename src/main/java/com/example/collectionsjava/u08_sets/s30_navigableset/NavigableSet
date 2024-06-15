@@ -1,0 +1,12 @@
+Intro
+
+    'NavigableSet' interface, extends the 'SortedSet' interface. It inherits the properties of SortedSet and
+adds some methods for enhanced navigation functionality.
+
+Key Properties
+
+    ->  Duplicates: Not allowed
+    ->  Insertion Order: Not preserved, but elements are maintained in a sorted order
+    ->  Heterogeneous Elements: Not allowed (only homogeneous elements to ensure proper sorting)
+    ->  Null values: Not allowed (in TreeSet)
+    ->  Interfaces implemented: Serializable, Cloneable

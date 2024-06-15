@@ -1,0 +1,89 @@
+Intro
+
+    Map interface is used to represent key-value pairs. Map interface is part of the Collection framework.
+However, it's not a sub-interface of the 'Collection' interface.
+
+Key Characteristics
+
+    ->  Keys and Values: Both keys and values are objects and can be of any data type.
+    ->  Duplicates: Keys cannot be duplicated, but values can be.
+    ->  Entries: Each key-value pair is called an entry. A map is considered a collection of entry objects.
+
+Methods:
+
+    int size(): Returns the number of key-value mappings in the map.
+
+    boolean isEmpty(): Returns true if the map contains no key-value mappings.
+
+    boolean containsKey(Object key): Returns true if the map contains a mapping for the specified key.
+
+    boolean containsValue(Object value): Returns true if the map contains one or more keys.
+
+    V get(Object get): Returns the value to which the specified key is mapped.
+
+    V put(K key, V value): Associates the specified value with the specified key in the map. Returns the previous value
+associated with the key, or null if there was no mapping for the key.
+
+    V remove(Object key): Removes the mapping for a key if it is present. Returns the value to which the map previously
+associated the key.
+
+    void putAll(Map<? extends K, ? extends V> m): Copies all of the mappings from the specified map to this map.
+
+    void clear(): Removes all of the mappings from the map.
+
+    Set<K> keySet(): Returns a set view of the keys contained in the map.
+
+    Collection<V> values(): Returns a collection view of the values contained in the map.
+
+    Set<Map.Entry<K, V>> entrySet(): Returns a set view of the mappings contained in the map.
+
+    boolean equals(Object o): Compares the specified map object with the existing map for equality.
+
+    int hashCode(): Returns the hash code value for the map.
+
+    default V getOrDefault(Object key, V defaultValue): Returns the value to which the specified key is mapped, or
+'defaultValue' if this map contains no mapping for the key.
+
+    default void forEach(BiConsumer<? super K, ? super V> action): Performs the given action for each entry in the map
+until all entries have been processed or the action throws an exception.
+
+    default void replaceAll(BiFunction<? super K, ? super V action): Replaces each entry's value with the result of
+invoking the given function on that entry until all entries have been processed or the function throws and exception.
+
+    default V putIfAbsent(K key, V value): If the specified key is not already associated with a value (or is mapped to
+null), associates it with the given value and returns null, else returns the current value.
+
+    default boolean remove(Object key, Object value): Removes the entry for the specified key only if it is currently
+mapped to the specified value.
+
+    default boolean replace(K key, V oldValue, V newValue): Replaces the entry for the specified key (oldValue) only if
+currently mapped to the specified value.
+
+    default V computeIfAbsent(K key, Function<? super K, ? extends V> mappingFunction): If the specified key is not
+already associated with a value (or is mapped to null), attempts to compute its value using the given mapping function
+and enters it into this map unless it's null.
+
+    default V computeIfPresent(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction): If the value for
+the specified key is present and non-null, attempts to compute a new mapping with given key and returns its current
+mapped value.
+
+    default V compute(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction): Attempts to compute a
+mapping for the specified key and its current mapped value (or null if there's no current mapping)
+
+    default V merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingFunction): If the specified
+key is not already associated with a value or is associated with null, associates it with the given value. Otherwise,
+replaces the value with the result of the given remapping function, or removes if the result is null.
+
+Java 9 Additions:
+
+    static Map<K, V> of(): Returns an immutable map containing zero mappings.
+
+    static Map<K, V> of(K k1, V v1): Returns an immutable map containing a single mapping.
+
+    static Map<K, V> of(K k1, V v1, K k2, V v2): Returns an immutable map containing two mappings.
+
+    static <K, V> Map<K,V> ofEntries(Map.Entry<? extends K, ? extends V> ...entries); Returns an immutable map
+containing the provided entries.
+
+    static <K, V> Map.Entry<K, V> entry(K k, V v): Returns an immutable map entry.
+

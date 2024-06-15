@@ -1,0 +1,14 @@
+Intro
+
+    NavigableMap is a sub-interface of the 'SortedMap' interface. This interface provides additional methods for
+navigating the map.
+
+Key Characteristics
+
+    1) Sub-interface of SortedMap
+
+        ->  NavigableMap extends SortedMap and provides additional navigation functionality.
+
+    2) Implementation Class
+
+        ->  Both 'SortedMap' and 'NavigableMap' are implemented by the 'TreeMap' class.

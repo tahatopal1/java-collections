@@ -1,0 +1,26 @@
+Intro
+
+    The Queue interface was introduced in Java version 1.5 and is used to represent a group of objects that are to be
+processed in a specific order, typically first-in, first-out (FIFO)
+
+Key properties
+
+    ->  Order: Follows first-in, first out (FIFO) order
+    ->  Operations: Elements are added at the tail and removed from the head
+
+Methods
+
+    ->  boolean add(E e): Adds the specified element to the tail of the queue. Throws an IllegalStateException if the
+element cannot be added.
+
+    ->  boolean offer(E e): Adds the specified element to the tail of the queue. Returns 'true' if the element was
+added successfully, or 'false' if it was not.
+
+    ->  E remove(): Removes and returns the head of the queue. Throws a 'NoSuchElementException' if the queue is empty.
+
+    ->  E poll(): Removes and returns the head of the queue. Returns 'null' if the queue is empty.
+
+    ->  E element(): Retrieves, but does not remove the head of the queue. Throws a 'NoSuchElementException' if the
+queue is empty.
+
+    ->  E peek(): Retrieves, but does not remove the head of the queue. Returns null if queue is empty.

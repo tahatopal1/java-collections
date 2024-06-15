@@ -1,0 +1,22 @@
+Intro
+
+    HashSet is an implementation of Set interface. HashSet is ideal for situations where searching is frequent,
+as it leverages hashing, the fastest algorithm for searching operations. The underlying data structure of 'HashSet'
+is a hash table, which allows efficient data retrieval.
+
+    The LinkedHashSet inherits all methods from the Collection interface.
+
+Key Points
+
+1) Characteristics of 'HashSet'
+
+    -> Duplicates: Not allowed.
+    -> Insertion Order: Not preserved.
+    -> Heterogeneous Elements: Allowed.
+    -> Null Values: Allowed.
+    -> Interfaces Implemented: Serializable, Cloneable
+
+2) Hashing and Hash Table
+
+    -> Hashing: Generates a hash code for each object.
+    -> Hash Table: Uses hash codes to determine the index where the objects are stored

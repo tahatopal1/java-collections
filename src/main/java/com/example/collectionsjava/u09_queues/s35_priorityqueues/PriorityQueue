@@ -1,0 +1,11 @@
+Intro
+
+    The 'PriorityQueue' is used to represent a group of objects that are processed according to their priority.
+
+Key properties
+
+    ->  Order: Element are ordered based on their priority, either natural or custom.
+    ->  Duplicates: Not allowed.
+    ->  Heterogeneous Elements: In natural order, no; In custom order, yes.
+    ->  Null Values: Not allowed.
+

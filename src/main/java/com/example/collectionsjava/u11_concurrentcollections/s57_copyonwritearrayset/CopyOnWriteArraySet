@@ -1,0 +1,14 @@
+Intro
+
+    As its name implies, CopyOnWriteArraySet is a concurrent version of a Set. It is built on top of the
+CopyOnWriteArrayList, meaning it shares the same internal mechanism.
+
+   ->   Write Operations: These are performed on a cloned copy of the array.
+   ->   Read Operations: These are done on the main array.
+   ->   Synchronization: After any update, the JVM internally synchronizes the cloned copy with the main array.
+
+Key Characteristics
+
+    ->  Fail-Safe: This collection is fail-safe, avoiding 'ConcurrentModificationException' during iteration.
+    ->  Unique Elements: Unlike CopyOnWriteArrayList, it ensures all elements are unique, as it adheres to Set interface
+

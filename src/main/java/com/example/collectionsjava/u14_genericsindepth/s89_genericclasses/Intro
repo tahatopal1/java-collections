@@ -1,0 +1,21 @@
+Intro
+
+    Generics are a mechanism for type checking at compile time, introduced in Java 5. They help ensure code safety by
+allowing you to specify the data types your classes, methods and interfaces will use, reducing runtime errors.
+
+Why Use Generics?
+
+    Generics provide two main advantages:
+
+        1) Compile-Time Type Checking: By specifying data types at compile time, the compiler can catch errors early,
+    preventing runtime exceptions and making debugging easier.
+
+        2) Code Reusability: Generics allow you to write flexible and reusable code. You can create classes, methods
+    and interfaces that work with any data type.
+
+Important Points
+
+    ->  Generics work only with instance methods and fields, not static ones, because static members are shared across
+all instances of a class, making it ambiguous which type to use.
+
+    ->  Generics allow you to write more maintainable and flexible code.

@@ -1,0 +1,17 @@
+Array
+  - Fixed in size
+  - Can only hold homogeneous type
+  - Memory point of view, we should not use 'Arrays'
+  - There are no underlying data structures
+  - Would be more performant if size is determined
+  - No out of the box methods to use
+  - Can hold primitive type and object type both
+
+Collection
+  - Collections are growable in nature
+  - Can hold homogeneous or heterogeneous
+  - Recommended to use to stop memory wastage as it grows in demand
+  - In built data structure and algorithms
+  - Wouldn't be performant if size is determined
+  - Even though size is fixed, it's too handy with easy to use methods
+  - Can only hold object types

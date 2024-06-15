@@ -1,0 +1,28 @@
+Intro
+
+    The 'CopyOnWriteArrayList' is a thread-safe version of ArrayList. It implements the List interface, which in turn
+implements the Collection interface. Both Collection and List interfaces are part of the 'java.util' package. However,
+the CopyOnWriteArrayList is part of the 'java.util.concurrent' package.
+
+Key Characteristics
+
+    1) Thread-Safety: Like ConcurrentHashMap, CopyOnWriteArrayList is also thread-safe. If multiple threads operate on a
+CopyOnWriteArrayList object, read operations can occur simultaneously without any locking. This means multiple threads
+can read from the list concurrently.
+
+    2) Write Operations: When a write operations (like add, set or remove) is performed, a cloned copy of the list is
+created. The write operation is performed on this cloned copy, not on the main object. After the write operation, the
+main list is synchronized with the cloned copy internally by the JVM. This ensures the safety during write operations.
+
+Performance Considerations
+
+    Creating a cloned copy for every write operation introduces a performance overhead. Therefore, CopyOnWriteArrayList
+should be used when the number of write operations is minimal compared to the number of read operations.
+
+Differences Between ArrayList and CopyOnWriteArrayList
+
+    1) Fail-Safe Iterator: The iterator of CopyOnWriteArrayList is fail-safe. This means it does not throw a
+ConcurrentModificationException if the list is modified while iterating.
+
+    2) Unsupported Insert/Remove Operation: The iterator of CopyOfWriteArrayList cannot perform remove operations.
+Attempting to do so will result in an 'UnsupportedOperationException'

@@ -1,0 +1,24 @@
+Improved Locking Mechanism
+
+    The newly added concurrent collections in Java use an improved locking mechanism in a multithreading environment.
+While the old collections block the entire object, the new concurrent collections enhance performance by locking only
+specific segments of the collection instead of the whole object. This segment-based locking significantly improves the
+performance by allowing more fine-grained control over which parts of the collection are locked during operations.
+
+Key Benefits of Concurrent Collections
+
+    1) Improved Performance: By locking only particular segments of the collection, concurrent collections reduce
+contention between threads, allowing more efficient access and modification.
+
+    2) Handling Concurrent Modification: Concurrent collections address the issue of 'ConcurrentModificationException'
+by allowing multiple threads to modify the collection simultaneously without causing inconsistencies.
+
+Why Use Concurrent Collections?
+
+    1) Enhanced Scalability: They support higher levels of concurrency by reducing the scope of locking.
+
+    2) Thread Safety: They ensure that multiple threads can work on the collection simultaneously without corrupting
+the data.
+
+    3) Consistency: They maintain data consistency even when multiple threads perform read and write operations
+concurrently.

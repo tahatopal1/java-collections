@@ -1,0 +1,11 @@
+Intro
+
+    The 'SortedSet' interface extends the 'Set' interface, inheriting its properties and adding additional ones
+to maintain a sorted order of elements.
+
+Characteristics
+
+    ->  Maintains elements in a specific sorting order
+    ->  No duplicate values
+    ->  No insertion order, but elements are sorted based on their natural ordering or a provided comparator
+    ->  Doesn't allow heterogeneous elements (Throws error on runtime)

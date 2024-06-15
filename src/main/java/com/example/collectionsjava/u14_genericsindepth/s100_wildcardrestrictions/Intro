@@ -1,0 +1,38 @@
+Limitation of Wildcards
+
+    1) Cannot Use Wildcards as Type Parameters in Class or Method Definition
+
+        // Invalid: public class Box<?> { ... }
+
+    2)  No Support for Multiple Bounds with Wildcards
+
+        // Invalid: List<? extends Number & Runnable> list;
+
+    3) Operations with Wildcards
+
+        Read Operations:
+
+            ->  No Restrictions: You can perform read operations on lists with wildcards.
+
+        Write Operations:
+
+            A)  Unbounded or Upper Bounded Operations: You cannot add elements to a list with unbounded
+        ('?') or upper bounded ('<? extends T>') wildcards because the specific type is unknown or can
+        vary
+
+            B)  Lower Bounded Wildcards: You can add elements of the specified type or its subtypes
+        to a list with a lower bounded wildcard (<? super T>), because the list can accept the type or
+        any of its supertypes.
+
+    4) Object Instantiation with Wildcards
+
+        You can declare an object with a wildcard, but you cannot directly instantiate it with a
+    wildcard.
+
+SUMMARY
+
+    ->  Class Definition: Wildcards cannot be used as type parameters in class or interface definitions.
+    ->  Multiple Bounds: Wildcards do not support multiple bounds.
+    ->  Read Operations: Allowed for all wildcard types.
+    ->  Write Operations: Allowed only for lower bounded wildcards (`<? super T>`)
+    ->  Object Instantiation: Cannot use wildcards on the right-hand side during instantiation.

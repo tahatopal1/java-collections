@@ -1,0 +1,38 @@
+Intro
+
+An indicator used to show the current position for respective object or element.
+
+Four types of Cursors:
+
+    -> Enumeration
+    -> Iterator
+    -> ListIterator
+    -> Spliterator
+
+1) Enumeration
+
+    Used For: Legacy class' objects
+    Legacy: Yes
+    Direction Flow: Forward
+    Access we can get: Only Read
+    Object Creation: By using elements() method of Vector class
+    Methods: hasMoreElements(), nextElement()
+
+2) Iterator
+
+    Used For: For any collection object
+    Legacy: No
+    Direction Flow: Forward
+    Access we can get: Read and Remove
+    Object Creation: By using iterator() method of Collection interface
+    Methods: hasNext(), next(), remove()
+
+3) ListIterator
+
+    Used For: For list class' objects
+    Legacy: No
+    Direction Flow: Forward and Backward
+    Access we can get: Read, Remove, Replace and Add
+    Object Creation: By using listiterator() method of List interface
+    Methods: hasNext(), next(), nextIndex(), hasPrevious(), previous(),
+        previousIndex(), remove(), add(Object o), set(Object o)

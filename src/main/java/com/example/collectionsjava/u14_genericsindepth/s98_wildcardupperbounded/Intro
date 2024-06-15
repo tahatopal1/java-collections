@@ -1,0 +1,31 @@
+Intro
+
+    The question mark symbol ('?') in generics is called a wildcard. It represents an unknown type, which can be used
+as the type of a parameter, a field, a local variable, or sometimes as a return type.
+
+Differences Between Generics and WildCards
+
+    1) Generics
+
+        ->  Generic define classes, interfaces or methods with type parameters to be specified when the type is used.
+        ->  Generics provide type safety and reusability by allowing the user to specify the exact type that the class,
+    interface or method should work with.
+
+    2) Wildcards
+
+        ->  Wildcards represent unknown types and are used to provide flexibility for methods and variables
+    dealing with.
+        ->  Wildcards are useful when a method or variable can work with a range of types without specifying an exact
+    type.
+
+Why we cannot have a statement like `List<Number> list = new ArrayList<Integer>();`
+
+    ->  When user declares `List<Number> list`, the list is expected to able to hold any `Number` type, including,
+`Integer`, `Double`, `Float`.
+    ->  If you assign `List<Number> list = new ArrayList<Integer>();`, the list reference would now be pointing to an
+an `ArrayList` that only accepts `Integer` objects.
+
+Correct Approach
+
+    `List<? extends Number> list = new ArrayList<Integer>();`
+    `Number num = list.get(0); // Safe to read as Number`

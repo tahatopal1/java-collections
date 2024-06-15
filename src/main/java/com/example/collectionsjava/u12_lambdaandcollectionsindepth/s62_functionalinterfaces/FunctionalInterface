@@ -1,0 +1,18 @@
+Intro - What is a Functional Interface
+
+    ->  Definition: An interface that contains only one abstract method.
+    ->  Purpose: Functional interfaces are used to invoke lambda expressions.
+    ->  Java examples:
+            ->  Runnable; with the abstract method 'run'
+            ->  Comparable; with the abstract method 'compareTo'
+            ->  Callable; with the abstract method 'call'
+
+Key Points
+
+    ->  Single Abstract Method: A functional interface must have exactly one abstract method.
+    ->  Java 8 Additions: From Java 8 onwards, interfaces can also have:
+        ->  Default methods
+        ->  Static methods
+    ->  Restriction: The restriction applies only to abstract methods, there can be any number of default and static
+    methods in a functional interface.
+

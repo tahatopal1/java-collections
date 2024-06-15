@@ -1,0 +1,43 @@
+Intro
+
+    'SortedMap' is a sub-interface of the 'Map' interface that stores key-value pairs in a sorted order based on
+the keys.
+
+
+Key Characteristics
+
+    1) Sorted Order
+
+        ->  Stores key-value pairs in ascending order of the keys.
+        ->  The sorting is based on the keys, not the values.
+
+    2) No Null Keys or Values
+
+        ->  SortedMap does not allow null keys or null values.
+
+    3) Sorting Mechanism
+
+        ->  Keys are sorted either by their natural ordering or by a specific comparator provided at map creation time.
+
+Methods of SortedMap Interface
+
+    Comparator<? super K> comparator(): Returns the comparator used to order the keys in the map, or null if the map
+uses the natural ordering of its keys.
+
+    SortedMap<K, V> subMap(K fromKey, K toKey): Returns a view of the portion of the map whose keys range from 'fromKey'
+, inclusive,to 'toKey' exclusive.
+
+    SortedMap<K, V> headMap(K toKey): Returns a view of the portion of the map whose keys are strictly less than 'toKey'
+
+    SortedMap<K, V> tailMap(K fromKey): Returns a view of the portion of the map whose keys are greater or equal to
+'fromKey'
+
+    K firstKey(): Returns the first (lowest) key currently in the map.
+
+    K lastKey(): Returns the last (highest) key currently in the map.
+
+    Set<K> keySet(): Returns a 'Set' view of the keys contained in this map.
+
+    Collection<V> values(): Returns a 'Collection' view of the values in this map.
+
+    Set<Map.Entry<K, V>> entrySet(): Returns a 'Set' view of the mappings contained in this map.

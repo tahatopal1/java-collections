@@ -1,0 +1,61 @@
+Intro
+
+    Both the HashMap and HashTable are used to store key-value paris and utilize hashing techniques for unique key
+storage.
+
+Key Differences
+
+    1) Synchronization
+
+        HashMap:
+
+            ->  Non-synchronized and not thread-safe.
+            ->  Multiple threads can access it simultaneously, which may lead to data inconsistency.
+            ->  To make a 'HashMap' synchronized, you can use 'Collections.synchronizedMap()'.
+
+        HashTable:
+
+            ->  Synchronized and thread-safe.
+            ->  All methods are synchronized, ensuring that only one thread can access it at a time, preventing data
+        consistency.
+
+    2) Performance
+
+        HashMap:
+
+            ->  Faster due to it's non-synchronized nature.
+            ->  Threads do not wait for each other, allowing concurrent access.
+
+        HashTable:
+
+            ->  Slower because it locks the entire table for each thread accessing it, leading to thread contention.
+
+    3) Null Keys and Values
+
+        HashMap:
+
+            ->  Allows one null key and multiple null values.
+
+        HashTable:
+
+            ->  Does not allow any null key or null value.
+
+    4) Version
+
+        HashMap:
+
+            ->  Introduced in Java 1.2 as part of the Collections Framework
+
+        HashTable:
+
+            ->  A legacy class since Java 1.0
+
+    5) Inheritance
+
+        HashMap:
+
+            ->  Extends 'AbstractMap'
+
+        HashTable:
+
+            ->  Extends 'Dictionary'

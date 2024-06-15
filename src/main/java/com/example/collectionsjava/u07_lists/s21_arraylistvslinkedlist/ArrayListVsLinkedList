@@ -1,0 +1,31 @@
+***** ArrayList *****
+
+Insertion/Deletion
+
+    Worse for Insertion/Deletion
+        * Requires shifting of elements
+        * Example: Adding an element at position 1 shifts all subsequent elements
+        * Not recommended for frequent insertions or deletions
+
+Retrieval
+
+    Better for Retrieval
+        * Elements are stored in consecutive memory locations (so we can directly access the item using index)
+        * Fast access due to underlying array structure
+
+***** LinkedList *****
+
+Insertion/Deletion
+
+    Better for Insertion/Deletion
+        * Only requires changing the address pointer of nodes
+        * Example: Adding a node involves updating the pointers of adjacent nodes
+        * Efficient for middle insertions/deletions
+
+Retrieval
+
+    Worse for Retrieval
+        * Elements are not stored in consecutive locations.
+        * Retrieval involves traversing nodes sequentially.
+        * Example: Finding an element in a linked list of size 100 involves checking
+        ... nodes one by one from the start.

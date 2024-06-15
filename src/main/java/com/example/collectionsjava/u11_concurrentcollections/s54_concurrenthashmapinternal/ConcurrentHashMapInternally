@@ -1,0 +1,28 @@
+Comparison of Map Implementations
+
+    1) HashMap
+
+        ->  Thread Safety: Not thread-safe
+        ->  Issues: Can lead to data inconsistency and 'ConcurrentModificationException' in multithreading environments.
+
+    2) HashTable
+
+        ->  Thread Safety: Thread-safe
+        ->  Issues: Poor performance due to locking the entire object for both read and write operations.
+
+    3) ConcurrentHashMap
+
+        ->  Thread Safety: Thread-safe
+        ->  Performance: Improved performance as it locks only specific segments during write operations, not the entire
+    object. No lock is required for read operations.
+        ->  Segment-based Locking: Divided into 16 segments (buckets) by default, each of which can be locked
+    independently. This allows up to 16 threads to operate on the map simultaneously without interference.
+        ->  Concurrency Level: The default concurrency level is 16, which can be customized during initialization.
+
+Key Points
+
+    ->  Partial Locking: Only locks the necessary segments during updates, improving performance.
+    ->  Fail-Safe: Does not throw 'ConcurrentModificationException'
+    ->  No Null Keys or Values: Null keys and values are not allowed.
+    ->  Customizable Concurrency Level: The level of concurrency can be st during initialization, though it is generally
+best to use the default setting.
